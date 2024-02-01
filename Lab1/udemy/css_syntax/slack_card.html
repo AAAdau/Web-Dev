@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.profile-card {
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    background-image: url('placeholder.svg'); /* Replace 'placeholder.svg' with your actual image path */
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    background-color: #fff; /* Set background color or remove this line if your SVG has a background */
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.profile-name {
+    margin: 0;
+    color: #fff;
+}
+
+.profile-title {
+    margin: 5px 0 0;
+    color: #fff;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    border-top: 1px solid #eee;
+}
+
+.round-button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    background-color: #4CAF50; /* Slack-like button color */
+    color: #fff;
+    font-size: 14px;
+}
+
+.round-button:hover {
+    background-color: #45a049; /* Darker color on hover */
+}
+
+
+    </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="profile-image"></div>
+      <h1 class="profile-name">John Doe</h1>
+      <p class="profile-title">Student at XYZ University</p>
+    </div>
+    <div class="profile-buttons">
+      <button class="round-button">Message</button>
+      <button class="round-button">Add to Slack</button>
+    </div>
+  </div>
+
+</body>
+</html>
