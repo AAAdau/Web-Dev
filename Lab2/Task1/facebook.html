@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Facebook</title>
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    width:100%;
+    background-color: #f5f5f6fd; 
+}
+
+form{
+    background-color: #f0f2f5;
+    position: absolute;
+    width: 400px;
+    height: 315px;
+    padding: 10px 5px 20px 5px;
+    margin: 14px 800px;
+    border-radius: 5px;
+    box-shadow: 7px 7px 8px -8px;
+
+}
+input[type='text'], input[type='password']{
+    display: block;
+    background-color: #f0f2f5;
+    margin: auto;
+    border: 1.5px solid rgb(200,200,200);
+    width: 350px;
+    height: 25px;
+    padding: 13px 13px;
+    border-radius: 5px;
+    text-align: left;
+    color: rgb(3, 3, 3);
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    font-weight: 400;
+}
+input[type='text']:focus,
+input[type='password']:focus {
+    border-color: #1877f2;
+    
+}
+input:focus::placeholder{
+    color:rgb(162, 161, 161);
+}
+button{
+    border: none;
+    background-color: #1877f2;
+    color: white;
+    margin: auto;
+    width: 375px;
+    height: 50px;
+    display: block;
+    border-radius: 5px;
+    padding: 13px 0;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+}
+.f-pws{
+    display: block;
+    width: 200px;
+    padding-left: 150px;
+    color: #1877f2;
+    font-family: 'Segoe UI';
+    font-size: 13px;
+    font-weight: 400;                
+}
+.line{
+    border-top: 1px solid #141414;
+    opacity: 0.3;
+}
+.btn2{
+    background-color: #42b72a;
+    font-size: 20px;
+    width: 235px;
+    text-align: center;
+}
+.sub-link h3{
+    width: 250px;
+    height: 100px;
+    margin: 80px 510px;
+    color: black;
+    font-family: "Segoe UI", Arial;
+    padding: 80px 300px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.sub-link h3 a{
+    color: black;
+    font-weight: bold;
+    font-size: 13px;
+}
+.f-container{
+    width: 350px;
+    margin-left:240px;
+    margin-top: 160px;
+    font-family:"Segoe UI", Roboto, "San Francisco";
+}
+.f-container img{
+    width:280px;
+}
+p{
+    font-size: 20px;
+    font-weight: 600;
+    word-spacing: 3px;
+}
+.pp {
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 500px;
+}
+.aa {
+    height: 106px;
+    margin: -20px;
+    margin-top:60px;
+}
+        </style>   
+    </head>
+    <body>
+        <form action="">
+            <input type="text" placeholder="Email or Phone Number" /> <br />
+            <input type="password" placeholder="Password" /> <br />
+            <button type="submit">Log in</button> <br>
+            <a href="" class="f-pws">Forget Password?</a> <br>
+            <div class="line"></div> <br>
+            <button class="btn2"> Create New Account</button>
+        </form>
+        <div class="f-container">
+            <img class="aa" src="	https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg" alt="facebook" width="400px">
+            <p class="pp">Connect with friends and the world around you on Facebook.</p>
+        </div>
+        <div class="sub-link">
+            <h3>
+                <a href=""><strong>Create a Page</strong></a> celebrity, band or business.
+            </h3>
+        </div>
+    </body>
+</html>
