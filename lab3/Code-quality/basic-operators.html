@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //The postfix and prefix form
+        let a = 1, b = 1;
+
+        alert( ++a ); // 2, prefix form returns the new value
+        alert( b++ ); // 1, postfix form returns the old value
+
+        alert( a ); // 2, incremented once
+        alert( b ); // 2, incremented once
+
+        //What are the values of c and x after the code below?
+        let c = 2;
+
+       let x = 1 + (c *= 2); //c=4,x=5
+       
+       //fix the addition
+       let d = "1"; // prompt("First number?", 1);
+       let e = "2"; // prompt("Second number?", 2);
+
+      alert(d + e); // 12
+
+      let f = +prompt("First number?", 1);
+     let g = +prompt("Second number?", 2);
+
+       alert(e + f); // 3
+
+       let h = prompt("First number?", 1);
+       let i = prompt("Second number?", 2);
+
+     alert(+h + +i); // 3
+    </script>
+</body>
+</html>
