@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToDo List</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #todo-list {
+        margin-top: 20px;
+    }
+    input[type="text"] {
+        width: 200px;
+    }
+    button {
+        margin-left: 5px;
+    }
+</style>
+</head>
+<body>
+<h2>ToDo List</h2>
+<input type="text" id="todo-input" placeholder="Enter task...">
+<button onclick="addTask()">Add Task</button>
+<ul id="todo-list"></ul>
+
+<script>
+    // 存储待办事项的数组
+    let todoItems = [];
+
+    // 添加任务函数
+    function addTask() {
+        let inputField = document.getElementById("todo-input");
+        let task = inputField.value.trim(); // 移除前后空格
+
+        // 确保输入不为空
+        if (task !== "") {
+            todoItems.push(task); // 将任务添加到数组中
+            inputField.value = ""; // 清空输入字段
+            displayTasks(); // 显示更新的任务列表
+        }
+    }
+
+    // 删除任务函数
+    function deleteTask(index) {
+        todoItems.splice(index, 1); // 从数组中删除任务
+        displayTasks(); // 显示更新的任务列表
+    }
+
+    // 显示任务列表函数
+    function displayTasks() {
+        let listContainer = document.getElementById("todo-list");
+        listContainer.innerHTML = ""; // 清空列表
+
+        // 将每个任务添加到列表中
+        todoItems.forEach(function(task, index) {
+            let listItem = document.createElement("li");
+            listItem.textContent = task;
+
+            // 添加删除按钮
+            let deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.onclick = function() {
+                deleteTask(index);
+            };
+
+            listItem.appendChild(deleteButton);
+            listContainer.appendChild(listItem);
+        });
+    }
+</script>
+</body>
+</html>
