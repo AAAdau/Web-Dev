@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let todoItems = [];
+
+       function addTask() {
+       let inputField = document.getElementById("todo-input");
+       let task = inputField.value.trim();
+
+       if(task !== ""){
+        todoItems.push({task:task,completed:false});
+        inputField.value = "";
+        displayTasks();
+       }
+    }
+
+      function deleteTask(index){
+        todoItems.splice(index,1);
+        displayTasks();
+    }
+
+    function toggleTask(index){
+        todoItems[index].completed = !todoItems[index].completed;
+        displayTasks();
+    }
+
+    function displayTasks(){
+        let listContainer = document.getElement
+    }
+
+       
+    </script>
+</body>
+</html>

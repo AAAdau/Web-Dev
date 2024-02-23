@@ -36,7 +36,7 @@
 
         // 确保输入不为空
         if (task !== "") {
-            todoItems.push(task); // 将任务添加到数组中
+            todoItems.push({ task: task, completed: false }); // 将任务添加到数组中
             inputField.value = ""; // 清空输入字段
             displayTasks(); // 显示更新的任务列表
         }
@@ -48,15 +48,32 @@
         displayTasks(); // 显示更新的任务列表
     }
 
+    // 切换任务状态函数
+    function toggleTask(index) {
+        todoItems[index].completed = !todoItems[index].completed; // 切换完成状态
+        displayTasks(); // 显示更新的任务列表
+    }
+
     // 显示任务列表函数
     function displayTasks() {
         let listContainer = document.getElementById("todo-list");
         listContainer.innerHTML = ""; // 清空列表
 
         // 将每个任务添加到列表中
-        todoItems.forEach(function(task, index) {
+        todoItems.forEach(function(item, index) {
             let listItem = document.createElement("li");
-            listItem.textContent = task;
+
+            // 创建复选框
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.checked = item.completed;
+            checkbox.onclick = function() {
+                toggleTask(index);
+            };
+
+            // 创建任务文本
+            let taskText = document.createElement("span");
+            taskText.textContent = item.task;
 
             // 添加删除按钮
             let deleteButton = document.createElement("button");
@@ -65,6 +82,8 @@
                 deleteTask(index);
             };
 
+            listItem.appendChild(checkbox);
+            listItem.appendChild(taskText);
             listItem.appendChild(deleteButton);
             listContainer.appendChild(listItem);
         });
